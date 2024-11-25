@@ -1,5 +1,5 @@
 // ======== AULA 05 - SUBIR PARA CLOUD ==========
-import 'dotenv/config';
+import "dotenv/config";
 
 // Conecta ao banco de dados
 import { ObjectId } from "mongodb";
@@ -31,5 +31,5 @@ export async function atualizarPost(id, novoPost) {
   const colecao = db.collection("posts");
   const objID = ObjectId.createFromHexString(id);
 
-  return colecao.updateOne({ _id: new ObjectId(objID)}, {$set: novoPost});
+  return colecao.updateOne({ _id: new ObjectId(objID) }, { $set: novoPost });
 }
